@@ -4007,11 +4007,11 @@ class Chatbot(Changeable, IOComponent, JSONSerializable):
         """
         if y is None:
             return []
-        for i, (message, response) in enumerate(y):
-            y[i] = (
-                None if message is None else self.md.renderInline(message),
-                None if response is None else self.md.renderInline(response),
-            )
+        # for i, (message, response) in enumerate(y):
+        #     y[i] = (
+        #         None if message is None else self.md.renderInline(message),
+        #         None if response is None else self.md.renderInline(response),
+        #     )
         return y
 
     def style(self, height: int | None = None, **kwargs):
